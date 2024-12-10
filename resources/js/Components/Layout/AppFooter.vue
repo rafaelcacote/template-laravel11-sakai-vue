@@ -16,11 +16,11 @@ const app = useApp();
                 <div class="text-gray-400 text-center">
                     <a href="https://semsa.manaus.am.gov.br/"
                         class="hover:text-primary-400 transition-all duration-300">
-                        Departamento de Tecnologia da Informação - SEMSA
+                        Cassottis
                     </a>
                     -
-                    <a href="https://www.manaus.am.gov.br/" class="hover:text-primary-400 transition-all duration-300">
-                        Prefeitura de Manaus
+                    <a href="https:/www.cassottis.com/" class="hover:text-primary-400 transition-all duration-300">
+                        Desenvolvimento em Sistemas
                     </a>
                 </div>
                 <!-- Informações de Desenvolvimento -->

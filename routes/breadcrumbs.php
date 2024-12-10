@@ -50,3 +50,43 @@ Breadcrumbs::for('tarefa.show', function (BreadcrumbTrail $trail) {
     $trail->parent('tarefa.index');
     $trail->push('Ver Tarefa', route('tarefa.show', $tarefa));
 });
+
+// APP > Exemplos > [Categories]
+Breadcrumbs::for('categorie.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('exemplos.');
+    $trail->push('Listar Categorias', route('categorie.index'));
+});
+Breadcrumbs::for('categorie.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('categorie.index');
+    $trail->push('Nova Categoria', route('categorie.create'));
+});
+Breadcrumbs::for('categorie.edit', function (BreadcrumbTrail $trail) {
+    $categorie = request()->route()->parameter('categorie');
+    $trail->parent('categorie.index');
+    $trail->push('Editar Categoria', route('categorie.edit', $categorie));
+});
+Breadcrumbs::for('categorie.show', function (BreadcrumbTrail $trail) {
+    $categorie = request()->route()->parameter('categorie');
+    $trail->parent('categorie.index');
+    $trail->push('Ver Categoria', route('categorie.show', $categorie));
+});
+
+// APP > Exemplos > [Orçamentos]
+Breadcrumbs::for('budget.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('exemplos.');
+    $trail->push('Listar Orçamentos', route('budget.index'));
+});
+Breadcrumbs::for('budget.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('budget.index');
+    $trail->push('Nova Orçamento', route('budget.create'));
+});
+Breadcrumbs::for('budget.edit', function (BreadcrumbTrail $trail) {
+    $budget = request()->route()->parameter('budget');
+    $trail->parent('budget.index');
+    $trail->push('Editar Orçamento', route('budget.edit', $budget));
+});
+Breadcrumbs::for('budget.show', function (BreadcrumbTrail $trail) {
+    $budget = request()->route()->parameter('budget');
+    $trail->parent('budget.index');
+    $trail->push('Ver Orçamento', route('budget.show', $budget));
+});

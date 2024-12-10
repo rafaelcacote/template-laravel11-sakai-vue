@@ -3,13 +3,17 @@
 use App\Http\Controllers\Exemplos\DashboardController;
 use App\Http\Controllers\Exemplos\PrimeVueController;
 use App\Http\Controllers\Exemplos\TarefaController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\Visitante\VisitanteController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 //* Rotas de visitantes - Sem autenticação
-Route::get('/', [VisitanteController::class, 'landingPage'])->name('landingPage');
+ Route::get('/', [VisitanteController::class, 'landingPage'])->name('landingPage');
+
+
 
 //* Rotas autenticadas
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
@@ -23,6 +27,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     // CRUD Multi Page (Listagem, Criação, Edição)
     Route::post('tarefa/{tarefa}/complete', [TarefaController::class, 'complete'])->name('tarefa.complete');
     Route::resource('tarefa', TarefaController::class);
+
+    Route::resource('categorie', CategorieController::class);
+    Route::resource('budget', BudgetController::class);
 
     // Exemplos de Funcionalidades Comuns
     Route::prefix('exemplos')->name('exemplos.')->group(function () {

@@ -22,26 +22,23 @@ const inicialNavItems = [
 		route: "dashboard",
 	},
 	{
-		label: "Exemplos",
+		label: "Apoio",
 		icon: PI.SEARCH,
 		items: [
 			{
-				label: "Dashboard",
-				icon: PI.CHART_LINE,
-				route: "exemplos.dashboard",
+				label: "Categorias",
+		        icon: PI.HOURGLASS,
+		        route: "categorie.index",
 			},
-			{
-				label: "Primevue",
-				icon: PI.PRIME,
-				route: "exemplos.primevue",
+            {
+				label: "Orçamentos",
+		        icon: PI.HOURGLASS,
+		        route: "budget.index",
 			},
-			{
-				label: "CRUD Multi Page",
-				icon: PI.TABLE,
-				route: "tarefa.index",
-			},
+
 		],
 	},
+
 ];
 
 /** @type {MenuItem[]} */
