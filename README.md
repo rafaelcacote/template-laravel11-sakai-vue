@@ -289,3 +289,5 @@ resources/js/Components/Produto/
 Para implementação de formulário utilizar **OBRIGATORIAMENTE** o useForm utilizando Helpers
 <a href="https://inertiajs.com/forms#form-helper">https://inertiajs.com/forms#form-helper</a>
 "# template-laravel11-sakai-vue" 
+#   R e c e i t a s D e s p e s a s  
+ 
